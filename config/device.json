@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "board": "01Studio CanMV K230 AI",
+  "firmware": {
+    "image": "CanMV_K230_01Studio_Emmc_micropython_v1.8-0-gc2d1f5c_nncase_v2.11.0.img.gz",
+    "canmv_version": "1.8-0-gc2d1f5c",
+    "nncase_version": "2.11.0"
+  },
+  "camera": {
+    "sensor": "GC2093",
+    "csi_id": 0,
+    "capture_width": 1920,
+    "capture_height": 1080,
+    "processing_width": null,
+    "processing_height": null,
+    "pixel_format": null,
+    "horizontal_mirror": false,
+    "vertical_flip": false
+  },
+  "display": {
+    "driver": "ST7701",
+    "width": 800,
+    "height": 480,
+    "touch_index": 0
+  },
+  "performance": {
+    "accuracy_first": true,
+    "target_measurement_seconds": 5.0
+  }
+}
