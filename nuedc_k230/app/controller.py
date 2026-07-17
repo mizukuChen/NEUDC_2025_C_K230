@@ -1,12 +1,8 @@
-"""Top-level application controller.
+"""Top-level application controller for the active development phase."""
 
-The first real implementation milestone replaces this explicit scaffold with
-the Phase 0 hardware capability probe. Keeping the entry point runnable makes
-deployment failures distinguishable from missing application functionality.
-"""
+from nuedc_k230.platform.capability_probe import run_phase0_probe
 
 
 def main():
-    print("NEUDC K230 scaffold ready")
-    print("Phase 0 hardware capability probe is not implemented yet")
-    return 0
+    report = run_phase0_probe()
+    return 0 if report.get("status") == "complete" else 1

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "report_path": "runtime/phase0/runtime_probe.json",
+  "sample_image_path": "runtime/phase0/gc2093_1920x1080.jpg",
+  "stability_log_path": "runtime/phase0/stability_samples.jsonl",
+  "run_camera": true,
+  "run_display_touch": true,
+  "run_combined_pipeline": true,
+  "run_image_primitives": true,
+  "camera_warmup_frames": 3,
+  "capture_samples": 3,
+  "touch_wait_ms": 5000,
+  "display_to_ide": true,
+  "save_sample_image": true,
+  "stability_seconds": 0,
+  "stability_sample_interval_seconds": 10
+}

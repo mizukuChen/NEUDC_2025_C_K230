@@ -8,7 +8,7 @@
   },
   "camera": {
     "sensor": "GC2093",
-    "csi_id": 0,
+    "csi_id": null,
     "capture_width": 1920,
     "capture_height": 1080,
     "processing_width": null,

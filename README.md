@@ -39,5 +39,17 @@ runtime/                    板上日志、采集图和临时结果，不入库
 
 ## 当前状态
 
-当前仅完成仓库与软件边界初始化。`main.py` 可以作为部署入口运行，但会明确报告
-Phase 0 硬件探针尚未实现，不包含任何虚假的相机或测量结果。
+当前已进入 Phase 0。`main.py` 会运行能力探针，并逐步写入：
+
+```text
+runtime/phase0/runtime_probe.json
+```
+
+探针会验证固件与模块、扫描 CSI 0～2、采集 1920×1080 RGB888 样帧、显示与触摸、
+显示/算法双通道、图像原语和可选稳定性测试。某一步失败不会阻止后续步骤，报告状态会是
+`complete_with_errors`。
+
+运行前确认没有其他程序占用 Sensor/Display。将仓库根目录内容复制到 `/sdcard`，在
+CanMV IDE 中运行 `main.py`；显示触摸测试期间按屏幕提示触摸三次。首次短测保持
+`config/probe.json` 的 `stability_seconds` 为 `0`。短测通过后改为 `1800`，执行30分钟
+稳定性测试。
